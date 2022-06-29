@@ -1,0 +1,57 @@
+download shp files from open data ni (take geojson if available)
+
+
+
+(optional if only shp available) convert to geojson in mapshaper
+
+mapshaper.org
+-proj wgs84
+-rename-fields new_name=old_name
+(if necessary) -filter-fields fields,to,keep
+export as Geojson
+will come down as json - edit suffix in windows explorer to .geojson
+
+
+
+merge any extra data needed (eg area codes) in qgis
+
+open geojson in qgis
+before import rename any csv headers as needed
+open csv lookup and merge in extra info using joins (in Properties menu)
+save merged layer out as geojson right click -> export -> save features as
+
+
+
+
+to make mbtiles in linux (ubuntu)
+
+cd to mapping folder from home
+kham1508@ESS096322:~$ cd mapping
+
+make folder within terminal, not in GUI
+kham1508@ESS096322:~/mapping$ mkdir dea
+
+cd to folder
+kham1508@ESS096322:~/mapping$ cd dea
+
+create mbtiles - Z/z refers to zoom levels min and max
+kham1508@ESS096322:~/mapping/dea$ tippecanoe -o dea.mbtiles -Z0 -z13 dea.geojson
+use --force in options if you wish to overwrite a previous file
+
+make folder for pbf output
+kham1508@ESS096322:~/mapping/dea$ mkdir pbf
+
+use tile-join to create pbf tiles from mbtiles -pC (create uncompressed tiles) -pk (with no size limit)
+kham1508@ESS096322:~/mapping/dea$ tile-join -e ./pbf -pC -pk dea.mbtiles
+
+
+hosting tiles
+
+create github empty repo
+clone to vs code 
+manually copy pbf folder contents into cloned repo
+stage, commit and push changes to remote repo
+pbf files can be accessed using the url: 
+https://raw.githubusercontent.com/{github account}/{repo name}/{branch - usually main}/{folder name - in this case, dea}/{z}/{x}/{y}.pbf
+an example is this:
+https://raw.githubusercontent.com/kham1508/map_tiles/main/soa/0/0/0.pbf
