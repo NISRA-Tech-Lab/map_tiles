@@ -26,6 +26,7 @@ save merged layer out as geojson right click -> export -> save features as
 to make mbtiles in linux (ubuntu)
 
 cd to mapping folder from home
+located at (linux)\\wsl$\Ubuntu\home\kham1508\mapping\soa
 kham1508@ESS096322:~$ cd mapping
 
 make folder within terminal, not in GUI
@@ -33,6 +34,8 @@ kham1508@ESS096322:~/mapping$ mkdir dea
 
 cd to folder
 kham1508@ESS096322:~/mapping$ cd dea
+
+copy input geojson from Desktop folder into folder just created in Ubuntu
 
 create mbtiles - Z/z refers to zoom levels min and max
 kham1508@ESS096322:~/mapping/dea$ tippecanoe -o dea.mbtiles -Z0 -z13 dea.geojson
