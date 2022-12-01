@@ -1,0 +1,15 @@
+{
+"name": "dea.mbtiles",
+"description": "dea.mbtiles",
+"version": "2",
+"minzoom": "0",
+"maxzoom": "13",
+"center": "-5.515137,54.686532,13",
+"bounds": "-8.217773,54.007769,-5.405273,55.329144",
+"type": "overlay",
+"format": "pbf",
+"generator": "tile-join v2.13.1",
+"generator_options": "tippecanoe -o dea.mbtiles -Z0 -z13 dea.geojson; tile-join -e ./pbf -pC -pk dea.mbtiles",
+"strategies": "[ { \"tiny_polygons\": 38 }, { \"tiny_polygons\": 28 }, { \"tiny_polygons\": 1 }, {  }, {  }, {  }, {  }, {  }, { \"tiny_polygons\": 1 }, {  }, { \"tiny_polygons\": 8 }, { \"tiny_polygons\": 18 }, { \"tiny_polygons\": 68 }, { \"tiny_polygons\": 143 } ]",
+"json": "{\"vector_layers\": [ { \"id\": \"dea\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 13, \"fields\": {\"DEA\": \"String\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"dea\",\"count\": 5612,\"geometry\": \"Polygon\",\"attributeCount\": 1,\"attributes\": [{\"attribute\": \"DEA\",\"count\": 80,\"type\": \"string\",\"values\": [\"AIRPORT\",\"ANTRIM\",\"ARDS PENINSULA\",\"ARMAGH\",\"BALLYARNETT\",\"BALLYCLARE\",\"BALLYMENA\",\"BALLYMONEY\",\"BALMORAL\",\"BANBRIDGE\",\"BANGOR CENTRAL\",\"BANGOR EAST AND DONAGHADEE\",\"BANGOR WEST\",\"BANN\",\"BANNSIDE\",\"BENBRADAGH\",\"BLACK MOUNTAIN\",\"BOTANIC\",\"BRAID\",\"CARNTOGHER\",\"CARRICK CASTLE\",\"CASTLE\",\"CASTLEREAGH EAST\",\"CASTLEREAGH SOUTH\",\"CAUSEWAY\",\"CLOGHER VALLEY\",\"COAST ROAD\",\"COLERAINE\",\"COLLIN\",\"COMBER\",\"COOKSTOWN\",\"COURT\",\"CRAIGAVON\",\"CROTLIEVE\",\"CUSHER\",\"DERG\",\"DOWNPATRICK\",\"DOWNSHIRE EAST\",\"DOWNSHIRE WEST\",\"DUNGANNON\",\"DUNSILLY\",\"ENNISKILLEN\",\"ERNE EAST\",\"ERNE NORTH\",\"ERNE WEST\",\"FAUGHAN\",\"FOYLESIDE\",\"GLENGORMLEY URBAN\",\"HOLYWOOD AND CLANDEBOYE\",\"KILLULTAGH\",\"KNOCKAGH\",\"LAGAN RIVER\",\"LARNE LOUGH\",\"LIMAVADY\",\"LISBURN NORTH\",\"LISBURN SOUTH\",\"LISNASHARRAGH\",\"LURGAN\",\"MACEDON\",\"MAGHERAFELT\",\"MID TYRONE\",\"MOYOLA\",\"NEWRY\",\"NEWTOWNARDS\",\"OLDPARK\",\"OMAGH\",\"ORMISTON\",\"PORTADOWN\",\"ROWALLANE\",\"SLIEVE CROOB\",\"SLIEVE GULLION\",\"SPERRIN\",\"THE GLENS\",\"THE MOOR\",\"THE MOURNES\",\"THREE MILE WATER\",\"TITANIC\",\"TORRENT\",\"WATERSIDE\",\"WEST TYRONE\"]}]}]}}"
+}
