@@ -30,7 +30,6 @@
     }
   },
   "sprite": "https://raw.githubusercontent.com/NISRA-Tech-Lab/map_tiles/main/basemap_styles/sprite",
-  "glyphs": "",
   "layers": [
     {
       "id": "background",
