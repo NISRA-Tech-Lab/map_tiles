@@ -30,7 +30,7 @@
     }
   },
   "sprite": "https://raw.githubusercontent.com/NISRA-Tech-Lab/map_tiles/main/basemap_styles/sprite",
-  "glyphs": "https://cdn.ons.gov.uk/maptiles/osm/fontsv1/{fontstack}/{range}.pbf",
+  "glyphs": "",
   "layers": [
     {
       "id": "background",
